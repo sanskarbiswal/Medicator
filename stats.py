@@ -12,7 +12,7 @@ for i in b:
 d=[]
 for i in c:
     [x,y]=(i,c.count(i))
-
+        
     d.append([x,y])
 
 #print(d)
@@ -23,11 +23,7 @@ for i in d:
     if i not in unique:
         unique.append(i)
 
-
-
 #print(unique)
-
-
 
 for i in unique:
     if (i[1]>6):
