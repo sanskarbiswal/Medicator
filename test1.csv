@@ -1,0 +1,21 @@
+D_ID,Fever,Cough,Runny nose,Headache,Breathlessness,Diarrhea,Abdominal pain,Vomiting,Nosebleed,Dizziness,Insomnia,Eye swelling,Redness in eye,Nausea,Sweating,Fatigue,Joint pain
+Influenza,3,2,2,3,0,0,0,2,0,2,2,0,0,0,2,3,0
+Swine Flu,3,2,2,3,3,1,0,2,0,2,2,0,2,2,2,3,0
+Cholera,3,0,0,1,0,3,3,3,0,0,0,0,0,2,1,1,0
+Typhoid,3,0,0,1,0,3,3,3,0,0,0,0,0,2,2,2,0
+Sunstroke,0,0,0,3,0,0,0,0,0,3,0,0,3,0,0,2,0
+Common cold,2,3,4,2,2,0,0,0,0,2,2,0,0,0,0,2,0
+Whooping Cough,1,4,3,0,2,0,0,1,0,0,0,0,1,0,0,2,0
+Gastroentritis,2,0,0,1,0,3,3,0,0,0,0,0,0,2,0,2,0
+Conjunctivitus,0,0,1,0,0,0,0,0,0,1,0,4,4,0,2,0,0
+Dehydration,0,0,0,0,0,2,0,0,0,4,0,0,0,0,0,4,0
+Asthama,0,2,0,1,4,0,0,0,0,2,2,0,0,0,0,0,0
+Cardiac arrest,0,0,0,3,4,0,0,2,0,2,0,0,0,2,3,3,0
+Malaria,4,0,0,3,0,0,3,2,0,2,0,0,0,2,3,4,0
+Migraine,0,0,1,5,0,0,0,2,0,3,0,0,0,2,2,0,0
+Anaemia,0,0,0,1,2,0,0,0,0,3,0,0,0,0,0,4,0
+Pneumonia,3,2,1,1,3,0,0,0,0,2,0,0,0,0,4,3,0
+Arthritis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,5
+Depression,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,4,0
+Food poisoning,1,0,0,0,0,3,3,3,0,2,0,0,0,3,2,2,0
+Insomnia,0,0,0,3,0,0,0,0,0,0,5,0,0,0,0,0,0
