@@ -50,7 +50,8 @@ def data_tx():
 
         dict={'Fever':0,'Cough':1,'Runny nose':2,'Headache':3,'Breathlessness':4,'Diarrhea':5,'Abdominal pain':6,'Vomiting':7,'Nosebleed':8,'Dizziness':9,'Insomnia':10,'Eye swelling':11,'Redness in eye':12,'Nausea':13,'Sweating':14,'Fatigue':15,'Joint pain':16} 
 
-        dict1={'Influenza':'Relenza','Swine Flu':'Symmetrel','Cholera':'Ciprofloxacin','Typhoid':'Azithromycin','Sunstroke':'Barbiturates','Common cold':'Ibuprufen','Whooping Cough':'Erthromycin','Gastroentritis':'Gelusil','Conjunctivitus':'Romycin','Dehydration':'ORS','Asthama':'Terbutaline','Cardiac Arrest':'Adrenaline','Malaria':'Doxycyline','Anaemia':'Hydroxyurea','Pneumonia':'Ibuprofen','Arthritis':'Lubrijoint 750','Depression':'Sleeping Pills','Food poisoning':'Norflox','Migraine':'Crocin'}
+        dict1={'Influenza':['Relenza','After Breakfast 0 After Dinner'],'Swine Flu':['Symmetrel','After Breakfast After Lunch After Dinner'],'Cholera':['Ciprofloxacin','After Breakfast 0 After Dinner'],'Typhoid':['Azithromycin','After Breakfast After Lunch After Dinner'],'Sunstroke':['After Breakfastarbiturates','0 0 After Dinner'],'Common cold':['Ibuprufen','After Breakfast 0 After Dinner'],'Whooping Cough':['Erthromycin','After Breakfast 0 After Dinner'],'Gastroentritis':['Gelusil','After Breakfast 0 After Dinner'],'Conjunctivitus':['Romycin','After Breakfast 0 After Dinner'],'Dehydration':['ORS','After Breakfast After Lunch After Dinner'],'Asthama':['Terbutaline','After Breakfast After Lunch After Dinner'],'Cardiac arrest':['Adrenaline','After Breakfast 0 After Dinner'],'Malaria':['Doxycyline','B After Lunch After Dinner'],'Anaemia':['Hydroxyurea','After Breakfast 0 After Dinner'],'Pneumonia':['Ibuprofen','After Breakfast 0 After Dinner'],'Arthritis':['Lubrijoint 750','After Breakfast 0 After Dinner'],'Depression':['Sleeping Pills','After Breakfast After Lunch After Dinner'],'Food poisoning':['Norflox','After Breakfast 0 After Dinner'],'Migraine':['Crocin','After Breakfast 0 After Dinner'],'Insomnia':['Sleeping Pills','After Breakfast 0 After Dinner']}
+
         sim_list=[]
 
         inp= d
@@ -75,9 +76,8 @@ def data_tx():
 
         similar=0
         temp1=0
-        index=0;
+        index=0
         a1=""
-        e=[]
         for i in range(0,20): 
             a=[]
             for j in diseases_set.iloc[i]:
@@ -88,6 +88,7 @@ def data_tx():
                 
                 index=i
                 temp1=similar
+                
 
 
 
@@ -95,13 +96,21 @@ def data_tx():
         #print(a1)      
         #print(index)
         #print(temp) 
+        g=open("disease.txt","a+")
+        #f=e.read()
+        g.write(a1+"    ")
+        g.close()
+    
         a2=dict1.get(a1)
+        
+        a4=a2[0]
+        a5=a2[1]
         print(a2)
 
  
-        final="Probable disease:"+a1+"    "+"Medecine required:"+a2;
+        final="Probable disease:"+a1+"    "+"Medecine required:"+a4;
 
-        return render_template("result.html",dis_name=a1,med_name=a2)
+        return render_template("result.html",dis_name=a1,med_name=a4,dosage_times=a5)
 
     else:
         dat = request.args.get('btn')
